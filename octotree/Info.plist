@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>octotree</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>XPC!</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.4.6</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.Safari.extension</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>SafariExtensionHandler</string>
+		<key>SFSafariContentScript</key>
+		<array>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Script</key>
+				<string>jquery.js</string>
+			</dict>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Script</key>
+				<string>jquery-ui.js</string>
+			</dict>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Script</key>
+				<string>jstree.js</string>
+			</dict>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Script</key>
+				<string>keymaster.js</string>
+			</dict>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Script</key>
+				<string>ondemand.js</string>
+			</dict>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Script</key>
+				<string>file-icons.js</string>
+			</dict>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Script</key>
+				<string>octotree.js</string>
+			</dict>
+		</array>
+		<key>SFSafariStyleSheet</key>
+		<array>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Style Sheet</key>
+				<string>jstree.css</string>
+			</dict>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Style Sheet</key>
+				<string>file-icons.css</string>
+			</dict>
+			<dict>
+				<key>Allowed URL Patterns</key>
+				<array>
+					<string>https://bitbucket.org/*</string>
+					<string>https://github.com/*</string>
+				</array>
+				<key>Style Sheet</key>
+				<string>octotree.css</string>
+			</dict>
+		</array>
+		<key>SFSafariWebsiteAccess</key>
+		<dict>
+			<key>Allowed Domains</key>
+			<array>
+				<string>bitbucket.org</string>
+				<string>github.com</string>
+			</array>
+			<key>Level</key>
+			<string>Some</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2018 Norio Nomura. All rights reserved.</string>
+	<key>NSHumanReadableDescription</key>
+	<string>Code tree for GitHub</string>
+</dict>
+</plist>

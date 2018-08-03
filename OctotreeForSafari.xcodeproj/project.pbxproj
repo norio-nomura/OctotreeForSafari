@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6CC4557C2113FC3B00265184 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4557B2113FC3B00265184 /* AppDelegate.m */; };
+		6CC4557F2113FC3B00265184 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4557E2113FC3B00265184 /* ViewController.m */; };
+		6CC455812113FC3D00265184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CC455802113FC3D00265184 /* Assets.xcassets */; };
+		6CC455842113FC3D00265184 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CC455822113FC3D00265184 /* Main.storyboard */; };
+		6CC455872113FC3D00265184 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC455862113FC3D00265184 /* main.m */; };
+		6CC455952113FC4C00265184 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC455942113FC4C00265184 /* Cocoa.framework */; };
+		6CC455992113FC4C00265184 /* SafariExtensionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC455982113FC4C00265184 /* SafariExtensionHandler.m */; };
+		6CC455A82113FC4C00265184 /* octotree.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6CC455922113FC4C00265184 /* octotree.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6CE45D972113FF0C00D85BC0 /* jquery-ui.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D912113FF0C00D85BC0 /* jquery-ui.js */; };
+		6CE45D982113FF0C00D85BC0 /* keymaster.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D922113FF0C00D85BC0 /* keymaster.js */; };
+		6CE45D992113FF0C00D85BC0 /* jstree.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D932113FF0C00D85BC0 /* jstree.js */; };
+		6CE45D9A2113FF0C00D85BC0 /* file-icons.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D942113FF0C00D85BC0 /* file-icons.js */; };
+		6CE45D9B2113FF0C00D85BC0 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D952113FF0C00D85BC0 /* jquery.js */; };
+		6CE45D9C2113FF0C00D85BC0 /* octotree.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D962113FF0C00D85BC0 /* octotree.js */; };
+		6CE45D9E2114001900D85BC0 /* ondemand.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D9D2114001900D85BC0 /* ondemand.js */; };
+		6CE45DA02114007100D85BC0 /* file-icons.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455AE2113FD2400265184 /* file-icons.woff2 */; };
+		6CE45DA12114007100D85BC0 /* mfixx.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455AF2113FD2400265184 /* mfixx.woff2 */; };
+		6CE45DA22114007100D85BC0 /* octicons.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455B02113FD2400265184 /* octicons.woff2 */; };
+		6CE45DA32114007100D85BC0 /* devopicons.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455B12113FD2400265184 /* devopicons.woff2 */; };
+		6CE45DA42114007100D85BC0 /* fontawesome.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455B22113FD2400265184 /* fontawesome.woff2 */; };
+		6CE45DA52114028500D85BC0 /* file-icons.css in Resources */ = {isa = PBXBuildFile; fileRef = 6CC455B62113FD2400265184 /* file-icons.css */; };
+		6CE45DA62114028500D85BC0 /* jstree.css in Resources */ = {isa = PBXBuildFile; fileRef = 6C93E4552113FD3F00C183C0 /* jstree.css */; };
+		6CE45DA72114028500D85BC0 /* octotree.css in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D842113FD7700D85BC0 /* octotree.css */; };
+		6CE45DAB2114042A00D85BC0 /* SafariExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE45DA82114042A00D85BC0 /* SafariExtensionViewController.m */; };
+		6CE45DAC2114042A00D85BC0 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45DA92114042A00D85BC0 /* SafariExtensionViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6CC455A62113FC4C00265184 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CC4556F2113FC3B00265184 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CC455912113FC4C00265184;
+			remoteInfo = octotree;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6CC455AC2113FC4C00265184 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6CC455A82113FC4C00265184 /* octotree.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CE45D9F2114006400D85BC0 /* Copy Fonts */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = fonts;
+			dstSubfolderSpec = 7;
+			files = (
+				6CE45DA02114007100D85BC0 /* file-icons.woff2 in Copy Fonts */,
+				6CE45DA12114007100D85BC0 /* mfixx.woff2 in Copy Fonts */,
+				6CE45DA22114007100D85BC0 /* octicons.woff2 in Copy Fonts */,
+				6CE45DA32114007100D85BC0 /* devopicons.woff2 in Copy Fonts */,
+				6CE45DA42114007100D85BC0 /* fontawesome.woff2 in Copy Fonts */,
+			);
+			name = "Copy Fonts";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6C93E4552113FD3F00C183C0 /* jstree.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = jstree.css; sourceTree = "<group>"; };
+		6CC455772113FC3B00265184 /* OctotreeForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctotreeForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CC4557A2113FC3B00265184 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6CC4557B2113FC3B00265184 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6CC4557D2113FC3B00265184 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6CC4557E2113FC3B00265184 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6CC455802113FC3D00265184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CC455832113FC3D00265184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CC455852113FC3D00265184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CC455862113FC3D00265184 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6CC455882113FC3D00265184 /* OctotreeForSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OctotreeForSafari.entitlements; sourceTree = "<group>"; };
+		6CC455922113FC4C00265184 /* octotree.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = octotree.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CC455942113FC4C00265184 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6CC455972113FC4C00265184 /* SafariExtensionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafariExtensionHandler.h; sourceTree = "<group>"; };
+		6CC455982113FC4C00265184 /* SafariExtensionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafariExtensionHandler.m; sourceTree = "<group>"; };
+		6CC455A02113FC4C00265184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CC455A52113FC4C00265184 /* octotree.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = octotree.entitlements; sourceTree = "<group>"; };
+		6CC455AE2113FD2400265184 /* file-icons.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "file-icons.woff2"; sourceTree = "<group>"; };
+		6CC455AF2113FD2400265184 /* mfixx.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mfixx.woff2; sourceTree = "<group>"; };
+		6CC455B02113FD2400265184 /* octicons.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.woff2; sourceTree = "<group>"; };
+		6CC455B12113FD2400265184 /* devopicons.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = devopicons.woff2; sourceTree = "<group>"; };
+		6CC455B22113FD2400265184 /* fontawesome.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fontawesome.woff2; sourceTree = "<group>"; };
+		6CC455B62113FD2400265184 /* file-icons.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "file-icons.css"; sourceTree = "<group>"; };
+		6CE45D842113FD7700D85BC0 /* octotree.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = octotree.css; sourceTree = "<group>"; };
+		6CE45D912113FF0C00D85BC0 /* jquery-ui.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-ui.js"; sourceTree = "<group>"; };
+		6CE45D922113FF0C00D85BC0 /* keymaster.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = keymaster.js; sourceTree = "<group>"; };
+		6CE45D932113FF0C00D85BC0 /* jstree.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jstree.js; sourceTree = "<group>"; };
+		6CE45D942113FF0C00D85BC0 /* file-icons.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "file-icons.js"; sourceTree = "<group>"; };
+		6CE45D952113FF0C00D85BC0 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		6CE45D962113FF0C00D85BC0 /* octotree.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = octotree.js; sourceTree = "<group>"; };
+		6CE45D9D2114001900D85BC0 /* ondemand.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ondemand.js; sourceTree = "<group>"; };
+		6CE45DA82114042A00D85BC0 /* SafariExtensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariExtensionViewController.m; sourceTree = "<group>"; };
+		6CE45DA92114042A00D85BC0 /* SafariExtensionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		6CE45DAA2114042A00D85BC0 /* SafariExtensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariExtensionViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CC455742113FC3B00265184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC4558F2113FC4C00265184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC455952113FC4C00265184 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CC4556E2113FC3B00265184 = {
+			isa = PBXGroup;
+			children = (
+				6CC455792113FC3B00265184 /* OctotreeForSafari */,
+				6CC455962113FC4C00265184 /* octotree */,
+				6CC455932113FC4C00265184 /* Frameworks */,
+				6CC455782113FC3B00265184 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6CC455782113FC3B00265184 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CC455772113FC3B00265184 /* OctotreeForSafari.app */,
+				6CC455922113FC4C00265184 /* octotree.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CC455792113FC3B00265184 /* OctotreeForSafari */ = {
+			isa = PBXGroup;
+			children = (
+				6CC4557A2113FC3B00265184 /* AppDelegate.h */,
+				6CC4557B2113FC3B00265184 /* AppDelegate.m */,
+				6CC4557D2113FC3B00265184 /* ViewController.h */,
+				6CC4557E2113FC3B00265184 /* ViewController.m */,
+				6CC455802113FC3D00265184 /* Assets.xcassets */,
+				6CC455822113FC3D00265184 /* Main.storyboard */,
+				6CC455852113FC3D00265184 /* Info.plist */,
+				6CC455862113FC3D00265184 /* main.m */,
+				6CC455882113FC3D00265184 /* OctotreeForSafari.entitlements */,
+			);
+			path = OctotreeForSafari;
+			sourceTree = "<group>";
+		};
+		6CC455932113FC4C00265184 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CC455942113FC4C00265184 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CC455962113FC4C00265184 /* octotree */ = {
+			isa = PBXGroup;
+			children = (
+				6CC455B62113FD2400265184 /* file-icons.css */,
+				6C93E4552113FD3F00C183C0 /* jstree.css */,
+				6CE45D842113FD7700D85BC0 /* octotree.css */,
+				6CC455A52113FC4C00265184 /* octotree.entitlements */,
+				6CC455972113FC4C00265184 /* SafariExtensionHandler.h */,
+				6CE45D942113FF0C00D85BC0 /* file-icons.js */,
+				6CE45D912113FF0C00D85BC0 /* jquery-ui.js */,
+				6CE45D952113FF0C00D85BC0 /* jquery.js */,
+				6CE45D932113FF0C00D85BC0 /* jstree.js */,
+				6CE45D922113FF0C00D85BC0 /* keymaster.js */,
+				6CE45D962113FF0C00D85BC0 /* octotree.js */,
+				6CE45D9D2114001900D85BC0 /* ondemand.js */,
+				6CE45DAA2114042A00D85BC0 /* SafariExtensionViewController.h */,
+				6CE45DA82114042A00D85BC0 /* SafariExtensionViewController.m */,
+				6CE45DA92114042A00D85BC0 /* SafariExtensionViewController.xib */,
+				6CC455982113FC4C00265184 /* SafariExtensionHandler.m */,
+				6CC455A02113FC4C00265184 /* Info.plist */,
+				6CC455AD2113FD2400265184 /* fonts */,
+			);
+			path = octotree;
+			sourceTree = "<group>";
+		};
+		6CC455AD2113FD2400265184 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6CC455AE2113FD2400265184 /* file-icons.woff2 */,
+				6CC455AF2113FD2400265184 /* mfixx.woff2 */,
+				6CC455B02113FD2400265184 /* octicons.woff2 */,
+				6CC455B12113FD2400265184 /* devopicons.woff2 */,
+				6CC455B22113FD2400265184 /* fontawesome.woff2 */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CC455762113FC3B00265184 /* OctotreeForSafari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC4558B2113FC3D00265184 /* Build configuration list for PBXNativeTarget "OctotreeForSafari" */;
+			buildPhases = (
+				6CC455732113FC3B00265184 /* Sources */,
+				6CC455742113FC3B00265184 /* Frameworks */,
+				6CC455752113FC3B00265184 /* Resources */,
+				6CC455AC2113FC4C00265184 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CC455A72113FC4C00265184 /* PBXTargetDependency */,
+			);
+			name = OctotreeForSafari;
+			productName = OctotreeForSafari;
+			productReference = 6CC455772113FC3B00265184 /* OctotreeForSafari.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6CC455912113FC4C00265184 /* octotree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC455A92113FC4C00265184 /* Build configuration list for PBXNativeTarget "octotree" */;
+			buildPhases = (
+				6CC4558E2113FC4C00265184 /* Sources */,
+				6CC4558F2113FC4C00265184 /* Frameworks */,
+				6CC455902113FC4C00265184 /* Resources */,
+				6CE45D9F2114006400D85BC0 /* Copy Fonts */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = octotree;
+			productName = octotree;
+			productReference = 6CC455922113FC4C00265184 /* octotree.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CC4556F2113FC3B00265184 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Norio Nomura";
+				TargetAttributes = {
+					6CC455762113FC3B00265184 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					6CC455912113FC4C00265184 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 6CC455722113FC3B00265184 /* Build configuration list for PBXProject "OctotreeForSafari" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CC4556E2113FC3B00265184;
+			productRefGroup = 6CC455782113FC3B00265184 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CC455762113FC3B00265184 /* OctotreeForSafari */,
+				6CC455912113FC4C00265184 /* octotree */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CC455752113FC3B00265184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC455812113FC3D00265184 /* Assets.xcassets in Resources */,
+				6CC455842113FC3D00265184 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC455902113FC4C00265184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CE45DAC2114042A00D85BC0 /* SafariExtensionViewController.xib in Resources */,
+				6CE45D9E2114001900D85BC0 /* ondemand.js in Resources */,
+				6CE45D9B2113FF0C00D85BC0 /* jquery.js in Resources */,
+				6CE45D9C2113FF0C00D85BC0 /* octotree.js in Resources */,
+				6CE45D992113FF0C00D85BC0 /* jstree.js in Resources */,
+				6CE45D9A2113FF0C00D85BC0 /* file-icons.js in Resources */,
+				6CE45D982113FF0C00D85BC0 /* keymaster.js in Resources */,
+				6CE45DA72114028500D85BC0 /* octotree.css in Resources */,
+				6CE45DA62114028500D85BC0 /* jstree.css in Resources */,
+				6CE45DA52114028500D85BC0 /* file-icons.css in Resources */,
+				6CE45D972113FF0C00D85BC0 /* jquery-ui.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CC455732113FC3B00265184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC4557F2113FC3B00265184 /* ViewController.m in Sources */,
+				6CC455872113FC3D00265184 /* main.m in Sources */,
+				6CC4557C2113FC3B00265184 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC4558E2113FC4C00265184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CE45DAB2114042A00D85BC0 /* SafariExtensionViewController.m in Sources */,
+				6CC455992113FC4C00265184 /* SafariExtensionHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CC455A72113FC4C00265184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CC455912113FC4C00265184 /* octotree */;
+			targetProxy = 6CC455A62113FC4C00265184 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6CC455822113FC3D00265184 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CC455832113FC3D00265184 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CC455892113FC3D00265184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6CC4558A2113FC3D00265184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6CC4558C2113FC3D00265184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OctotreeForSafari/OctotreeForSafari.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PK9GMQ772L;
+				INFOPLIST_FILE = OctotreeForSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.nor.OctotreeForSafari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6CC4558D2113FC3D00265184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OctotreeForSafari/OctotreeForSafari.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PK9GMQ772L;
+				INFOPLIST_FILE = OctotreeForSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.nor.OctotreeForSafari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6CC455AA2113FC4C00265184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = octotree/octotree.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK9GMQ772L;
+				INFOPLIST_FILE = octotree/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.nor.OctotreeForSafari.octotree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6CC455AB2113FC4C00265184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = octotree/octotree.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK9GMQ772L;
+				INFOPLIST_FILE = octotree/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.nor.OctotreeForSafari.octotree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CC455722113FC3B00265184 /* Build configuration list for PBXProject "OctotreeForSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC455892113FC3D00265184 /* Debug */,
+				6CC4558A2113FC3D00265184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CC4558B2113FC3D00265184 /* Build configuration list for PBXNativeTarget "OctotreeForSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC4558C2113FC3D00265184 /* Debug */,
+				6CC4558D2113FC3D00265184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CC455A92113FC4C00265184 /* Build configuration list for PBXNativeTarget "octotree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC455AA2113FC4C00265184 /* Debug */,
+				6CC455AB2113FC4C00265184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6CC4556F2113FC3B00265184 /* Project object */;
+}
