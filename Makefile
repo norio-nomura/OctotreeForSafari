@@ -69,7 +69,7 @@ fix_file_modes:
 
 update_octotree_files: octotree/file-icons.css octotree/octotree.js octotree/ondemand.js update_css update_fonts update_icons update_js fix_file_modes
 
-XCODE_FLAGS = -project OctotreeForSafari.xcodeproj -scheme OctotreeForSafari
+XCODE_FLAGS = -project OctotreeForSafari.xcodeproj -scheme OctotreeForSafari CODE_SIGN_IDENTITY=""
 ARCHIVE_PATH = OctotreeForSafari.xcarchive
 
 build: update_octotree_files
