@@ -3,6 +3,7 @@ osx_image: xcode9.4
 before_install:
 - sudo systemsetup -settimezone Asia/Tokyo
 script:
+- export/add-keychain.sh
 - make archive
 branches:
   only:
@@ -14,7 +15,6 @@ env:
   - LC_ALL=en_US.UTF-8
   - secure: HzmvvSQk7/I93PA0oQDcreIGFMEcpr/fIfiUOlUf8oJ/jEk6wqSqoZN+ZXI97dQFXAtHsDcKMCKEZq1CCNiRo7kykpyH+NItK3vXCVEA5yp/6kM4wjAy+BI3XrN55xWKVpwwIC/a7mgjBU1PAf7zbAb1qKNAdjRhg3rQ0ctqbQYFuqx5yb9n6cpomlIP1SFJVnbLuH2sAVqkZWSSqn7kcIAnzD4TOFTbJXorotpM1AU/P2zHPPzxrJSPF36T4WROc2fHZv8eFIUwNnIY7tu0B6wsa/rLHINZvXZDAd8IpxUBbTl64NYjWm6xs6fjFcGMdjvxdLvI4CkjwZqfLdIoM9g/g/dhTSmSy9Bh0wKDAlChZuQtNm9ilKRTM+0NyV4qB/E8G8Y/PZgJg/uz7YId1XeNCCJXaozA0NgeCJ0DVind+SDwQ3ILrQuBPADPlleieSx7BTvX13k15v/fk2uBhP+Y1w2ZpBXyBt7xj9NYkEJ78FSBr22lZfkCOh9gleytzn3F4q6kAEPwhw4uVJZsYLdnvvzGnif0oKk/LRaP00ERBOjXR04bRzGJhWfTjtOj7WB9AjqdGZBJ1aQaTqcPuWqcaZDiUpyeDxmGTGY21VlPgX+nLei6dz0UY7HpU6VxdgN3loOko6XL4i8V+NOh7k7aQZmHDwx2pucrm6kHIR4=
 before_deploy:
-- export/add-keychain.sh
 - make export
 - zip -r --symlinks OctotreeForSafari-$TRAVIS_TAG.zip OctotreeForSafari.app
 deploy:
