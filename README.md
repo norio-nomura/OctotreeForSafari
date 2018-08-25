@@ -11,10 +11,8 @@
 1. Download [OctotreeForSafari-0.1.0.zip](http://github.com/norio-nomura/OctotreeForSafari/releases/download/0.1.0/OctotreeForSafari-0.1.0.zip) (2018/08/25 updated)
 2. Unzip it
 3. Move `OctotreeForSafari` to `/Applications` folder
-
-## Usage
-1. Launch `OctotreeForSafari`
-2. Enable `octotree` in Safari > Preferences... > Extensions
+4. Launch `OctotreeForSafari`
+5. Enable `octotree` in Safari > Preferences... > Extensions
 ![PreferenceSafari 11.1.2 on macOS 10.12.6](screenshot/safari-11.1.2-on-macOS-10.12.6.png)
 
 ## Author
