@@ -1,8 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "mac",
       "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "icon16.png",
       "scale" : "1x"
     },
     {
@@ -18,12 +19,13 @@
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "Icon-64.png",
+      "filename" : "icon64.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "mac",
       "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "icon128.png",
       "scale" : "1x"
     },
     {

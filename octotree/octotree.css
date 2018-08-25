@@ -166,6 +166,14 @@
   font-size: 12px;
   margin-left: 17px;
 }
+.octotree_views .octotree_optsview .octotree_opts_backing {
+  color: gray;
+  font-size: 12px;
+  margin-left: 2px;
+}
+.octotree_views .octotree_optsview .octotree_opts_backing a {
+  float: none;
+}
 .octotree-show .octotree_sidebar {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
