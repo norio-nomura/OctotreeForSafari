@@ -12,3 +12,18 @@ env:
   global:
   - LANG=en_US.UTF-8
   - LC_ALL=en_US.UTF-8
+  - secure: HzmvvSQk7/I93PA0oQDcreIGFMEcpr/fIfiUOlUf8oJ/jEk6wqSqoZN+ZXI97dQFXAtHsDcKMCKEZq1CCNiRo7kykpyH+NItK3vXCVEA5yp/6kM4wjAy+BI3XrN55xWKVpwwIC/a7mgjBU1PAf7zbAb1qKNAdjRhg3rQ0ctqbQYFuqx5yb9n6cpomlIP1SFJVnbLuH2sAVqkZWSSqn7kcIAnzD4TOFTbJXorotpM1AU/P2zHPPzxrJSPF36T4WROc2fHZv8eFIUwNnIY7tu0B6wsa/rLHINZvXZDAd8IpxUBbTl64NYjWm6xs6fjFcGMdjvxdLvI4CkjwZqfLdIoM9g/g/dhTSmSy9Bh0wKDAlChZuQtNm9ilKRTM+0NyV4qB/E8G8Y/PZgJg/uz7YId1XeNCCJXaozA0NgeCJ0DVind+SDwQ3ILrQuBPADPlleieSx7BTvX13k15v/fk2uBhP+Y1w2ZpBXyBt7xj9NYkEJ78FSBr22lZfkCOh9gleytzn3F4q6kAEPwhw4uVJZsYLdnvvzGnif0oKk/LRaP00ERBOjXR04bRzGJhWfTjtOj7WB9AjqdGZBJ1aQaTqcPuWqcaZDiUpyeDxmGTGY21VlPgX+nLei6dz0UY7HpU6VxdgN3loOko6XL4i8V+NOh7k7aQZmHDwx2pucrm6kHIR4=
+before_deploy:
+- export/add-keychain.sh
+- make export
+- zip -r --symlinks OctotreeForSafari-$TRAVIS_TAG.zip OctotreeForSafari.app
+deploy:
+  provider: releases
+  api_key:
+    secure: OmP/Sr5s/Cm8joQl1cyMcoCAvUB0s01AXSR4RXnvFICXchctaVlqtYvbOF80qAZVbw+1keF1PqPnfY2icohCXsWt242aW9nVO1Yelcr+2AFcuSd1f2vrnG+xzpDhwDbCkuXqsN8QtQSFL10kaJAf0SGJHrf7g5XBLWDV6ohV2nYVk7yn0v+UGIHu2zFgL8iMoiVO/iRQwrwou9Jz31AEL6cryrbEHOZkQ5UjosW8fdqSrI0nYkBYPzeY/TawhGuMNxMU+iac1Q442ji97eItmgE2zpkNXHsvwCejjfSQz/vmehRlZ7KjmD7e+TeKCg9/JzWlfcmC6Sp4Eo3JKusCDXZQ4ANSb31iYgncoabKMkmxleH57ULkI8vZkw6J9n32nYWHiaNvRG1lv6fob2hoCy+8kfIoptsMVoh9i8zTPTNzmqDyWtHNGb95o/4hW6q52VZy6tMtVf+8AazCmJ1x3Pv4zY/mkp7Pas/84tFFL/hKkvhbaYZ3vTyRRgO13eH+mCnOGOrBG3W1i0EEclBSTmMeEtrz4oBsNnAClDrswnks+0aRqoU+O+Le61BqfcXdjKN2y6Dvx4JyduFX5cbSUIg/XMiW+zD62Os0XfGb3a88VFLsOhJR92W57Nc2pZcoLqmhGrQi2Xb8OVfo+6e/t/yn0aPQuHqN+g3W5Hg0IaU=
+  file: OctotreeForSafari-$TRAVIS_TAG.zip
+  on:
+    tags: true
+  skip_cleanup: true
+after_deploy:
+- export/remove-keychain.sh

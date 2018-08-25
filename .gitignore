@@ -20,3 +20,10 @@ profile
 # Bundler
 .bundle
 vendor/
+
+# export
+*.app
+*.xcarchive
+DistributionSummary.plist
+ExportOptions.plist
+Packaging.log
