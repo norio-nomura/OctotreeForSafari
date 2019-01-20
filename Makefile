@@ -6,42 +6,26 @@ bootstrap:
 	@git submodule update --init --recursive
 	@mkdir -p upstream/tmp
 
-upstream/package.json: bootstrap
-upstream/package-lock.json: upstream/package.json
-	cd upstream && npm install
-
-upstream: upstream/package-lock.json
-	cd upstream && gulp safari
+update_safariextension: bootstrap
+	cd upstream && npm install && npm start safari
 
 # update_octotree_files's dependencies
-upstream/libs/file-icons.css: bootstrap
+remove_old_files:
+	rm -f octotree/*.css octotree/*.js octotree/fonts/* octotree/images/*
+
 octotree/file-icons.css: upstream/libs/file-icons.css
 	sed 's|\.\./fonts|fonts|' < $< > $@
 	touch -r $< $@
 
-upstream/tmp/octotree.js: upstream/package-lock.json
-	cd upstream && gulp safari:js
-
-octotree/octotree.js: upstream/tmp/octotree.js
-	cp -p $< $@
-
-upstream/libs/ondemand/*: bootstrap
-upstream/tmp/ondemand.js: upstream/package-lock.json upstream/libs/ondemand/*
-	cd upstream && gulp lib:ondemand
-
-octotree/ondemand.js: upstream/tmp/ondemand.js
-	cp -p $< $@
-
-upstream/libs/*.css: bootstrap
-update_css: upstream/libs/*.css
+update_css: upstream/tmp/safari/octotree.safariextension/*.css
 ifeq ($(MAKELEVEL), 0)
 	@$(MAKE) $@
 else
-	cp -p $(filter-out upstream/libs/file-icons.css, $^) octotree
+	cp -p $(filter-out upstream/tmp/safari/octotree.safariextension/file-icons.css, $^) octotree
 endif
 
-upstream/libs/fonts/*: bootstrap
-update_fonts: upstream/libs/fonts/*
+update_fonts: upstream/tmp/safari/octotree.safariextension/fonts/*
+	mkdir -p octotree/fonts
 ifeq ($(MAKELEVEL), 0)
 	@$(MAKE) $@
 else
@@ -53,11 +37,18 @@ ifeq ($(MAKELEVEL), 0)
 	@$(MAKE) $@
 endif
 
+update_images: upstream/tmp/safari/octotree.safariextension/images/*
+	mkdir -p octotree/images
+ifeq ($(MAKELEVEL), 0)
+	@$(MAKE) $@
+else
+	cp -p $^ octotree/images
+endif
+
 $(APPICON_DIR)/%.png: upstream/icons/%.png
 	cp -p $< $@
 
-upstream/libs/*.js: bootstrap
-update_js: upstream/libs/*.js
+update_js: upstream/tmp/safari/octotree.safariextension/*.js
 ifeq ($(MAKELEVEL), 0)
 	@$(MAKE) $@
 else
@@ -65,15 +56,12 @@ else
 endif
 
 fix_file_modes:
-	chmod 644 octotree/*.css octotree/*.js octotree/fonts/*
+	chmod 644 octotree/*.css octotree/*.js octotree/fonts/* octotree/images/*
 
-update_octotree_files: octotree/file-icons.css octotree/octotree.js octotree/ondemand.js update_css update_fonts update_icons update_js fix_file_modes
+update_octotree_files: update_safariextension remove_old_files octotree/file-icons.css update_css update_fonts update_icons update_images update_js fix_file_modes
 
 XCODE_FLAGS = -project OctotreeForSafari.xcodeproj -scheme OctotreeForSafari CODE_SIGN_IDENTITY="Developer ID Application" CODE_SIGN_STYLE=Manual
 ARCHIVE_PATH = OctotreeForSafari.xcarchive
-
-build: update_octotree_files
-	xcodebuild $(XCODE_FLAGS)
 
 archive:
 	xcodebuild $(XCODE_FLAGS) -archivePath $(ARCHIVE_PATH) archive
