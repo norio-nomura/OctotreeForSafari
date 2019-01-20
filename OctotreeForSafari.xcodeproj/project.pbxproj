@@ -15,21 +15,24 @@
 		6CC455952113FC4C00265184 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC455942113FC4C00265184 /* Cocoa.framework */; };
 		6CC455992113FC4C00265184 /* SafariExtensionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC455982113FC4C00265184 /* SafariExtensionHandler.m */; };
 		6CC455A82113FC4C00265184 /* octotree.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6CC455922113FC4C00265184 /* octotree.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6CE45D972113FF0C00D85BC0 /* jquery-ui.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D912113FF0C00D85BC0 /* jquery-ui.js */; };
-		6CE45D982113FF0C00D85BC0 /* keymaster.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D922113FF0C00D85BC0 /* keymaster.js */; };
-		6CE45D992113FF0C00D85BC0 /* jstree.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D932113FF0C00D85BC0 /* jstree.js */; };
-		6CE45D9A2113FF0C00D85BC0 /* file-icons.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D942113FF0C00D85BC0 /* file-icons.js */; };
-		6CE45D9B2113FF0C00D85BC0 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D952113FF0C00D85BC0 /* jquery.js */; };
-		6CE45D9C2113FF0C00D85BC0 /* octotree.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D962113FF0C00D85BC0 /* octotree.js */; };
-		6CE45D9E2114001900D85BC0 /* ondemand.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D9D2114001900D85BC0 /* ondemand.js */; };
+		6CD6750D21F4A50E0016CFF3 /* 40px.png in Copy Images */ = {isa = PBXBuildFile; fileRef = 6CD6750621F4A4AE0016CFF3 /* 40px.png */; };
+		6CD6750E21F4A50E0016CFF3 /* 32px.png in Copy Images */ = {isa = PBXBuildFile; fileRef = 6CD6750721F4A4AE0016CFF3 /* 32px.png */; };
+		6CD6750F21F4A50E0016CFF3 /* throbber.gif in Copy Images */ = {isa = PBXBuildFile; fileRef = 6CD6750821F4A4AE0016CFF3 /* throbber.gif */; };
+		6CD6751021F4A5970016CFF3 /* file-icons.css in Resources */ = {isa = PBXBuildFile; fileRef = 6CC455B62113FD2400265184 /* file-icons.css */; };
+		6CD6751121F4A5970016CFF3 /* jstree.css in Resources */ = {isa = PBXBuildFile; fileRef = 6C93E4552113FD3F00C183C0 /* jstree.css */; };
+		6CD6751221F4A5970016CFF3 /* octotree.css in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D842113FD7700D85BC0 /* octotree.css */; };
+		6CD6751321F4A5970016CFF3 /* file-icons.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D942113FF0C00D85BC0 /* file-icons.js */; };
+		6CD6751421F4A5970016CFF3 /* jquery-ui.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D912113FF0C00D85BC0 /* jquery-ui.js */; };
+		6CD6751521F4A5970016CFF3 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D952113FF0C00D85BC0 /* jquery.js */; };
+		6CD6751621F4A5970016CFF3 /* jstree.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D932113FF0C00D85BC0 /* jstree.js */; };
+		6CD6751721F4A5970016CFF3 /* keymaster.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D922113FF0C00D85BC0 /* keymaster.js */; };
+		6CD6751821F4A5970016CFF3 /* octotree.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D962113FF0C00D85BC0 /* octotree.js */; };
+		6CD6751921F4A5970016CFF3 /* ondemand.js in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D9D2114001900D85BC0 /* ondemand.js */; };
 		6CE45DA02114007100D85BC0 /* file-icons.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455AE2113FD2400265184 /* file-icons.woff2 */; };
 		6CE45DA12114007100D85BC0 /* mfixx.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455AF2113FD2400265184 /* mfixx.woff2 */; };
 		6CE45DA22114007100D85BC0 /* octicons.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455B02113FD2400265184 /* octicons.woff2 */; };
 		6CE45DA32114007100D85BC0 /* devopicons.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455B12113FD2400265184 /* devopicons.woff2 */; };
 		6CE45DA42114007100D85BC0 /* fontawesome.woff2 in Copy Fonts */ = {isa = PBXBuildFile; fileRef = 6CC455B22113FD2400265184 /* fontawesome.woff2 */; };
-		6CE45DA52114028500D85BC0 /* file-icons.css in Resources */ = {isa = PBXBuildFile; fileRef = 6CC455B62113FD2400265184 /* file-icons.css */; };
-		6CE45DA62114028500D85BC0 /* jstree.css in Resources */ = {isa = PBXBuildFile; fileRef = 6C93E4552113FD3F00C183C0 /* jstree.css */; };
-		6CE45DA72114028500D85BC0 /* octotree.css in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45D842113FD7700D85BC0 /* octotree.css */; };
 		6CE45DAB2114042A00D85BC0 /* SafariExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE45DA82114042A00D85BC0 /* SafariExtensionViewController.m */; };
 		6CE45DAC2114042A00D85BC0 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CE45DA92114042A00D85BC0 /* SafariExtensionViewController.xib */; };
 /* End PBXBuildFile section */
@@ -54,6 +57,19 @@
 				6CC455A82113FC4C00265184 /* octotree.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CD6750C21F4A4FD0016CFF3 /* Copy Images */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = images;
+			dstSubfolderSpec = 7;
+			files = (
+				6CD6750D21F4A50E0016CFF3 /* 40px.png in Copy Images */,
+				6CD6750E21F4A50E0016CFF3 /* 32px.png in Copy Images */,
+				6CD6750F21F4A50E0016CFF3 /* throbber.gif in Copy Images */,
+			);
+			name = "Copy Images";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6CE45D9F2114006400D85BC0 /* Copy Fonts */ = {
@@ -97,6 +113,9 @@
 		6CC455B12113FD2400265184 /* devopicons.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = devopicons.woff2; sourceTree = "<group>"; };
 		6CC455B22113FD2400265184 /* fontawesome.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fontawesome.woff2; sourceTree = "<group>"; };
 		6CC455B62113FD2400265184 /* file-icons.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "file-icons.css"; sourceTree = "<group>"; };
+		6CD6750621F4A4AE0016CFF3 /* 40px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40px.png; sourceTree = "<group>"; };
+		6CD6750721F4A4AE0016CFF3 /* 32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 32px.png; sourceTree = "<group>"; };
+		6CD6750821F4A4AE0016CFF3 /* throbber.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = throbber.gif; sourceTree = "<group>"; };
 		6CE45D842113FD7700D85BC0 /* octotree.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = octotree.css; sourceTree = "<group>"; };
 		6CE45D912113FF0C00D85BC0 /* jquery-ui.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-ui.js"; sourceTree = "<group>"; };
 		6CE45D922113FF0C00D85BC0 /* keymaster.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = keymaster.js; sourceTree = "<group>"; };
@@ -180,6 +199,7 @@
 				6CE45D842113FD7700D85BC0 /* octotree.css */,
 				6CC455A52113FC4C00265184 /* octotree.entitlements */,
 				6CC455972113FC4C00265184 /* SafariExtensionHandler.h */,
+				6CE45DAA2114042A00D85BC0 /* SafariExtensionViewController.h */,
 				6CE45D942113FF0C00D85BC0 /* file-icons.js */,
 				6CE45D912113FF0C00D85BC0 /* jquery-ui.js */,
 				6CE45D952113FF0C00D85BC0 /* jquery.js */,
@@ -187,12 +207,12 @@
 				6CE45D922113FF0C00D85BC0 /* keymaster.js */,
 				6CE45D962113FF0C00D85BC0 /* octotree.js */,
 				6CE45D9D2114001900D85BC0 /* ondemand.js */,
-				6CE45DAA2114042A00D85BC0 /* SafariExtensionViewController.h */,
-				6CE45DA82114042A00D85BC0 /* SafariExtensionViewController.m */,
-				6CE45DA92114042A00D85BC0 /* SafariExtensionViewController.xib */,
 				6CC455982113FC4C00265184 /* SafariExtensionHandler.m */,
+				6CE45DA82114042A00D85BC0 /* SafariExtensionViewController.m */,
 				6CC455A02113FC4C00265184 /* Info.plist */,
+				6CE45DA92114042A00D85BC0 /* SafariExtensionViewController.xib */,
 				6CC455AD2113FD2400265184 /* fonts */,
+				6CD6750521F4A4AE0016CFF3 /* images */,
 			);
 			path = octotree;
 			sourceTree = "<group>";
@@ -207,6 +227,16 @@
 				6CC455B22113FD2400265184 /* fontawesome.woff2 */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		6CD6750521F4A4AE0016CFF3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6CD6750621F4A4AE0016CFF3 /* 40px.png */,
+				6CD6750721F4A4AE0016CFF3 /* 32px.png */,
+				6CD6750821F4A4AE0016CFF3 /* throbber.gif */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +269,7 @@
 				6CC4558F2113FC4C00265184 /* Frameworks */,
 				6CC455902113FC4C00265184 /* Resources */,
 				6CE45D9F2114006400D85BC0 /* Copy Fonts */,
+				6CD6750C21F4A4FD0016CFF3 /* Copy Images */,
 			);
 			buildRules = (
 			);
@@ -300,16 +331,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CE45DAC2114042A00D85BC0 /* SafariExtensionViewController.xib in Resources */,
-				6CE45D9E2114001900D85BC0 /* ondemand.js in Resources */,
-				6CE45D9B2113FF0C00D85BC0 /* jquery.js in Resources */,
-				6CE45D9C2113FF0C00D85BC0 /* octotree.js in Resources */,
-				6CE45D992113FF0C00D85BC0 /* jstree.js in Resources */,
-				6CE45D9A2113FF0C00D85BC0 /* file-icons.js in Resources */,
-				6CE45D982113FF0C00D85BC0 /* keymaster.js in Resources */,
-				6CE45DA72114028500D85BC0 /* octotree.css in Resources */,
-				6CE45DA62114028500D85BC0 /* jstree.css in Resources */,
-				6CE45DA52114028500D85BC0 /* file-icons.css in Resources */,
-				6CE45D972113FF0C00D85BC0 /* jquery-ui.js in Resources */,
+				6CD6751021F4A5970016CFF3 /* file-icons.css in Resources */,
+				6CD6751121F4A5970016CFF3 /* jstree.css in Resources */,
+				6CD6751221F4A5970016CFF3 /* octotree.css in Resources */,
+				6CD6751321F4A5970016CFF3 /* file-icons.js in Resources */,
+				6CD6751421F4A5970016CFF3 /* jquery-ui.js in Resources */,
+				6CD6751521F4A5970016CFF3 /* jquery.js in Resources */,
+				6CD6751621F4A5970016CFF3 /* jstree.js in Resources */,
+				6CD6751721F4A5970016CFF3 /* keymaster.js in Resources */,
+				6CD6751821F4A5970016CFF3 /* octotree.js in Resources */,
+				6CD6751921F4A5970016CFF3 /* ondemand.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
