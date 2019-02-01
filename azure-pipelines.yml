@@ -1,0 +1,34 @@
+trigger:
+- master
+- refs/tags/*
+
+pool:
+  vmImage: 'macOS-10.13'
+
+variables:
+  DEVELOPER_DIR: '/Applications/Xcode_10.1.app'
+
+steps:
+- script: export/add-keychain.sh
+  displayName: Add Keychain
+  env:
+    KEY_PASSWORD: $(secret)
+- script: make archive
+  displayName: Make Archive
+- script: make export
+  displayName: Make Export
+- script: |
+    mkdir -p $(Build.ArtifactStagingDirectory) &&
+    zip -r --symlinks $(Build.ArtifactStagingDirectory)/OctotreeForSafari.zip OctotreeForSafari.app
+  displayName: Create Zip
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: OctotreeForSafari.zip
+    targetPath: $(Build.ArtifactStagingDirectory)
+- script: export/remove-keychain.sh
+  displayName: Remove Keychain
+  condition: succeededOrFailed()
+- task: GitHubRelease@0
+  inputs:
+    gitHubConnection: norio-nomura
+    repositoryName: norio-nomura/OctotreeForSafari
