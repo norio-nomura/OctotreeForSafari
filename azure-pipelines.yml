@@ -33,3 +33,4 @@ steps:
     gitHubConnection: norio-nomura
     repositoryName: norio-nomura/OctotreeForSafari
     action: edit
+  continueOnError: true
