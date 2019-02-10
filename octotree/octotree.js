@@ -866,8 +866,8 @@ class GitHub extends PjaxAdapter {
       shouldPushEverything || (!togglerVisible && !sidebarVisible)
         ? '' // Nothing is visible or already pushed, leave as-is
         : !sidebarVisible
-          ? 25 // Sidebar is collapsed, move the logo to avoid hiding the toggler
-          : sidebarWidth; // Otherwise, move the header from the sidebar
+        ? 25 // Sidebar is collapsed, move the logo to avoid hiding the toggler
+        : sidebarWidth; // Otherwise, move the header from the sidebar
     $header.css('padding-left', headerPadding);
   }
 
@@ -907,16 +907,37 @@ class GitHub extends PjaxAdapter {
       return cb();
     }
 
-    // Get branch by inspecting URL or DOM, quite fragile so provide multiple fallbacks
-    const branchDropdownMenu = $('.branch-select-menu');
+    // Get branch by inspecting URL or DOM, quite fragile so provide multiple fallbacks.
+    // TODO would be great if there's a more robust way to do this
+    /**
+     * Github renders the branch name in one of below structure depending on the length
+     * of branch name
+     *
+     * Option 1: when the length is short enough
+     * <summary title="Switch branches or tags">
+     *   <span class="css-truncate-target">feature/1/2/3</span>
+     * </summary>
+     *
+     * Option 2: when the length is too long
+     * <summary title="feature/1/2/3/4/5/6/7/8">
+     *   <span class="css-truncate-target">feature/1/2/3...</span>
+     * </summary>
+     */
+    const branchDropdownMenuSummary = $('.branch-select-menu summary');
+    const branchNameInTitle = branchDropdownMenuSummary.attr('title');
+    const branchNameInSpan = branchDropdownMenuSummary.find('span').text();
+    const branchFromSummary =
+      branchNameInTitle && branchNameInTitle.toLowerCase().startsWith('switch branches')
+        ? branchNameInSpan
+        : branchNameInTitle;
+
     const branch =
       // Pick the commit ID as branch name when the code page is listing tree in a particular commit
       (type === 'commit' && typeId) ||
-      // Pick the commit ID or branch name from the Branch dropdown menu
+      // Pick the commit ID or branch name from the DOM
       // Note: we can't use URL as it would not work with branches with slashes, e.g. features/hotfix-1
-      $('.select-menu-item.selected', branchDropdownMenu).data('name') ||
-      $('.select-menu-button', branchDropdownMenu).attr('title') ||
-      $('.select-menu-button span', branchDropdownMenu).text() ||
+      ($('.overall-summary .numbers-summary .commits a').attr('href') || '').split('/').slice(-1)[0] ||
+      branchFromSummary ||
       // Pull requests page
       ($('.commit-ref.base-ref').attr('title') || ':').match(/:(.*)/)[1] ||
       // Reuse last selected branch if exist
@@ -1168,8 +1189,16 @@ class TreeView {
     this.$view = $dom.find('.octotree_treeview');
     this.$tree = this.$view
       .find('.octotree_view_body')
-      .on('click.jstree', '.jstree-open>a', ({target}) => this.$jstree.close_node(target))
-      .on('click.jstree', '.jstree-closed>a', ({target}) => this.$jstree.open_node(target))
+      .on('click.jstree', '.jstree-open>a', ({target}) => {
+        setTimeout(() => {
+          this.$jstree.close_node(target)
+        }, 0);
+      })
+      .on('click.jstree', '.jstree-closed>a', ({target}) => {
+        setTimeout(() => {
+          this.$jstree.open_node(target)
+        }, 0);
+      })
       .on('click', this._onItemClick.bind(this))
       .jstree({
         core: {multiple: false, worker: false, themes: {responsive: false}},
