@@ -8,7 +8,7 @@
 - Safari 11.1.2 or later
 
 ## Installation
-1. Download [OctotreeForSafari-0.2.2.zip](https://github.com/norio-nomura/OctotreeForSafari/releases/download/0.2.2/OctotreeForSafari-0.2.2.zip) (2019/02/01 updated)
+1. Download [OctotreeForSafari-0.2.2.zip](https://github.com/norio-nomura/OctotreeForSafari/releases/download/0.2.2/OctotreeForSafari-0.2.2.zip) (2019/02/10 updated)
 2. Unzip it
 3. Move `OctotreeForSafari` to `/Applications` folder
 4. Launch `OctotreeForSafari`
