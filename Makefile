@@ -1,4 +1,5 @@
-APPICON_DIR = OctotreeForSafari/Assets.xcassets/AppIcon.appiconset
+APP_NAME = OctotreeForSafari
+APPICON_DIR = $(APP_NAME)/Assets.xcassets/AppIcon.appiconset
 
 .PHONY: bootstrap upstream update_css update_fonts update_icons update_octotree_files
 
@@ -60,11 +61,26 @@ fix_file_modes:
 
 update_octotree_files: update_safariextension remove_old_files octotree/file-icons.css update_css update_fonts update_icons update_images update_js fix_file_modes
 
-XCODE_FLAGS = -project OctotreeForSafari.xcodeproj -scheme OctotreeForSafari CODE_SIGN_IDENTITY="Developer ID Application" CODE_SIGN_STYLE=Manual
-ARCHIVE_PATH = OctotreeForSafari.xcarchive
+EXPORT_PATH = .
+APP_PATH?= $(EXPORT_PATH)/$(APP_NAME).app
+ARCHIVE_PATH = $(EXPORT_PATH)/$(APP_NAME).xcarchive
+XCODE_FLAGS = -project $(APP_NAME).xcodeproj -scheme $(APP_NAME) CODE_SIGN_IDENTITY="Developer ID Application" CODE_SIGN_STYLE=Manual
+ZIP_PATH?= $(EXPORT_PATH)/$(APP_NAME).zip
 
-archive:
+$(ARCHIVE_PATH):
 	xcodebuild $(XCODE_FLAGS) -archivePath $(ARCHIVE_PATH) archive
 
-export: archive
-	xcodebuild -exportArchive -archivePath $(ARCHIVE_PATH) -exportPath . -exportOptionsPlist export/options.plist
+archive: $(ARCHIVE_PATH)
+
+$(APP_PATH): $(ARCHIVE_PATH)
+	xcodebuild -exportArchive -archivePath $(ARCHIVE_PATH) -exportPath $(EXPORT_PATH) -exportOptionsPlist export/options.plist
+
+export: $(APP_PATH)
+
+$(ZIP_PATH): $(APP_PATH)
+	/usr/bin/ditto -c -k --keepParent $(APP_PATH) $(ZIP_PATH)
+
+zip: $(ZIP_PATH)
+
+notarize: zip
+	xcrun altool --notarize-app --file $(ZIP_PATH) --primary-bundle-id "io.nor.OctotreeForSafari" --apiKey $(API_KEY) --apiIssuer $(API_ISSUER)
