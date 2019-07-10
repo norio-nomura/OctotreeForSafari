@@ -80,10 +80,5 @@ $(APP_PATH): $(ARCHIVE_PATH)
 
 export: $(APP_PATH)
 
-$(ZIP_PATH): $(APP_PATH)
-	/usr/bin/ditto -c -k --keepParent $(APP_PATH) $(ZIP_PATH)
-
-zip: $(ZIP_PATH)
-
-notarize: zip
-	xcrun altool --notarize-app --file $(ZIP_PATH) --primary-bundle-id "io.nor.OctotreeForSafari" --apiKey $(API_KEY) --apiIssuer $(API_ISSUER)
+notarize: $(APP_PATH)
+	export/notarize.sh $(APP_PATH) $(ZIP_PATH)
