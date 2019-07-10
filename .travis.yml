@@ -1,5 +1,5 @@
 os: osx
-osx_image: xcode10.1
+osx_image: xcode11
 before_install:
 - sudo systemsetup -settimezone Asia/Tokyo
 script:
@@ -13,15 +13,22 @@ env:
   global:
   - LANG=en_US.UTF-8
   - LC_ALL=en_US.UTF-8
+  - ZIP_PATH=OctotreeForSafari-$TRAVIS_TAG.zip
   - secure: HzmvvSQk7/I93PA0oQDcreIGFMEcpr/fIfiUOlUf8oJ/jEk6wqSqoZN+ZXI97dQFXAtHsDcKMCKEZq1CCNiRo7kykpyH+NItK3vXCVEA5yp/6kM4wjAy+BI3XrN55xWKVpwwIC/a7mgjBU1PAf7zbAb1qKNAdjRhg3rQ0ctqbQYFuqx5yb9n6cpomlIP1SFJVnbLuH2sAVqkZWSSqn7kcIAnzD4TOFTbJXorotpM1AU/P2zHPPzxrJSPF36T4WROc2fHZv8eFIUwNnIY7tu0B6wsa/rLHINZvXZDAd8IpxUBbTl64NYjWm6xs6fjFcGMdjvxdLvI4CkjwZqfLdIoM9g/g/dhTSmSy9Bh0wKDAlChZuQtNm9ilKRTM+0NyV4qB/E8G8Y/PZgJg/uz7YId1XeNCCJXaozA0NgeCJ0DVind+SDwQ3ILrQuBPADPlleieSx7BTvX13k15v/fk2uBhP+Y1w2ZpBXyBt7xj9NYkEJ78FSBr22lZfkCOh9gleytzn3F4q6kAEPwhw4uVJZsYLdnvvzGnif0oKk/LRaP00ERBOjXR04bRzGJhWfTjtOj7WB9AjqdGZBJ1aQaTqcPuWqcaZDiUpyeDxmGTGY21VlPgX+nLei6dz0UY7HpU6VxdgN3loOko6XL4i8V+NOh7k7aQZmHDwx2pucrm6kHIR4=
+  - secure: djBEHC0MSnxChKT4pKbUV75crxGQAOvl7/4fvjImVsXCBuBiJMPif6Q/vtjwYIxziv5vQ1fHrRBT7F3EU5U2mtgic3hLh9u9iX79GX3xTiWWt5T99ACoivycWBig1eymP8DtSbBbes42/ubo8vKqGeOCibJ6+mOjihU3ijK07n7/e8mmaIirMgzvA6QE2St637fMrVr07gTHcITrgI8lnTex/tQCWCrz8AQnfUU29qGVYgUkQAUKakpjStQIldj1xkeY8aV/gg0GdUe1HhWI+u5D/KFTSzsGx8SKNti+2ycFnfGim19fnndT8rtL+if3et+fI4iRb0pmqyKvTqmIz8ndcBfufD9Cppg5krJXG4KfvPpt0EplP6rg2nB0b/0R86V6UktZsDFbDfG5drdLt/+Yl9SXyZVnu59chEpBNyeZugAiWYU7CeS+azkd28YklpHcDMJROTXd7sNwE2eJd4cgpgBV//A4hI52sBv57aJqxQ7i1i4tZnp6HDXWFhDJZu6O3NEHu4tk4n5wr/VN6Ga15KJVoQRIGE+0pWCbFJ27E58RN00QdOI9u6bzeWsJshNsTkPSbCxskFptUGuoqdaQLDshHP8bBKmle+CK+p0Zn0Qj8Y/yXt2wrsTBkiqksXms8iAh38D+at6mPncCBcN6gn3qlDpp+l2DeBIyUkY=
+  - secure: B2kVlS9H6HQ1ULPRh6d6l9xrVbTspnqcKt1qMFD53dIc7KHqtRP2jl6O99w9gqDVyobMSVWzNb/JfWua9ciA171cOD71frkYE3vpwz6+NJhEN4qcyrBJFsu05hCB+ZFsR4EZKjSVwoYIhQcVeDNyAT9Zp0VrcDglcuhYfju3VLWXBg4bZGpDxzwcy7W5kGEXD85IHy312grR2Rzbkh+Ld6/R7WUMzH4J+zDqohGL6ruIMZvWIvLDJh8UcsVJQPYKqsjkJZai7fFny0DY8kuNJyVjK3jppL08IOM+P9lR3FnV0mVpul0Oc2yJeEGmCsjDO4hpKo+li67eaHiCvw93EexrRfRFyxtmgYqc+GgyeVLGeTLOoraTYQDe9jRK/H95yTQG6p9jVK9eWfkx+i3mPf/Arzm3kyxdg53sOH8/3uNWaqdT/RiBfnqSy6XVfSkdhDeOZLNiD3oxRc+EsTKB012eRE4TDQVHgXADB5RQrYuHoJKPZ214FPdciq0+m2DEdkU2xXJT0moqHLfFlugLXhWHYRfpz60XhT+nqPWv0ueSQM3JnZWx8MzDxmWK8euKPKpn/k2fM8dtu5xmDTP+WqqKhheCH/W4rj12DNOiA6gafDR2kWP/40Jp38iWudnw+VbGtUb7r2vVNJ/a3Gv5V/1hgtpiBNJSQSFoeqmoOtw=
 before_deploy:
-- make export
-- zip -r --symlinks OctotreeForSafari-$TRAVIS_TAG.zip OctotreeForSafari.app
+- mkdir -p ~/.appstoreconnect/private_keys
+- openssl aes-256-cbc -K $encrypted_3de8d6da74a4_key -iv $encrypted_3de8d6da74a4_iv
+  -in private_keys/AuthKey.p8.enc -out ~/.appstoreconnect/private_keys/AuthKey_$API_KEY.p8
+  -d
+- make notarize
+- rm -f ~/.appstoreconnect/private_keys/AuthKey_$API_KEY.p8
 deploy:
   provider: releases
   api_key:
     secure: OmP/Sr5s/Cm8joQl1cyMcoCAvUB0s01AXSR4RXnvFICXchctaVlqtYvbOF80qAZVbw+1keF1PqPnfY2icohCXsWt242aW9nVO1Yelcr+2AFcuSd1f2vrnG+xzpDhwDbCkuXqsN8QtQSFL10kaJAf0SGJHrf7g5XBLWDV6ohV2nYVk7yn0v+UGIHu2zFgL8iMoiVO/iRQwrwou9Jz31AEL6cryrbEHOZkQ5UjosW8fdqSrI0nYkBYPzeY/TawhGuMNxMU+iac1Q442ji97eItmgE2zpkNXHsvwCejjfSQz/vmehRlZ7KjmD7e+TeKCg9/JzWlfcmC6Sp4Eo3JKusCDXZQ4ANSb31iYgncoabKMkmxleH57ULkI8vZkw6J9n32nYWHiaNvRG1lv6fob2hoCy+8kfIoptsMVoh9i8zTPTNzmqDyWtHNGb95o/4hW6q52VZy6tMtVf+8AazCmJ1x3Pv4zY/mkp7Pas/84tFFL/hKkvhbaYZ3vTyRRgO13eH+mCnOGOrBG3W1i0EEclBSTmMeEtrz4oBsNnAClDrswnks+0aRqoU+O+Le61BqfcXdjKN2y6Dvx4JyduFX5cbSUIg/XMiW+zD62Os0XfGb3a88VFLsOhJR92W57Nc2pZcoLqmhGrQi2Xb8OVfo+6e/t/yn0aPQuHqN+g3W5Hg0IaU=
-  file: OctotreeForSafari-$TRAVIS_TAG.zip
+  file: "$ZIP_PATH"
   on:
     tags: true
   skip_cleanup: true

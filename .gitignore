@@ -27,3 +27,4 @@ vendor/
 DistributionSummary.plist
 ExportOptions.plist
 Packaging.log
+notarize.noindex/
