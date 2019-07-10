@@ -61,19 +61,22 @@ fix_file_modes:
 
 update_octotree_files: update_safariextension remove_old_files octotree/file-icons.css update_css update_fonts update_icons update_images update_js fix_file_modes
 
-EXPORT_PATH = .
-APP_PATH?= $(EXPORT_PATH)/$(APP_NAME).app
-ARCHIVE_PATH = $(EXPORT_PATH)/$(APP_NAME).xcarchive
+NOTARIZE_PATH?= notarize.noindex
+APP_PATH?= $(NOTARIZE_PATH)/$(APP_NAME).app
+ARCHIVE_PATH = $(NOTARIZE_PATH)/$(APP_NAME).xcarchive
 XCODE_FLAGS = -project $(APP_NAME).xcodeproj -scheme $(APP_NAME) CODE_SIGN_IDENTITY="Developer ID Application" CODE_SIGN_STYLE=Manual
-ZIP_PATH?= $(EXPORT_PATH)/$(APP_NAME).zip
+ZIP_PATH?= $(NOTARIZE_PATH)/$(APP_NAME).zip
 
-$(ARCHIVE_PATH):
+$(NOTARIZE_PATH):
+	mkdir -p $(NOTARIZE_PATH)
+
+$(ARCHIVE_PATH): $(NOTARIZE_PATH)
 	xcodebuild $(XCODE_FLAGS) -archivePath $(ARCHIVE_PATH) archive
 
 archive: $(ARCHIVE_PATH)
 
 $(APP_PATH): $(ARCHIVE_PATH)
-	xcodebuild -exportArchive -archivePath $(ARCHIVE_PATH) -exportPath $(EXPORT_PATH) -exportOptionsPlist export/options.plist
+	xcodebuild -exportArchive -archivePath $(ARCHIVE_PATH) -exportPath $(NOTARIZE_PATH) -exportOptionsPlist export/options.plist
 
 export: $(APP_PATH)
 
